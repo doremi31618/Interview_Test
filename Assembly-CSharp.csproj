@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Test2\GameObjectManager.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\CreatureBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\GameObjectManager.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\RayPerception.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
