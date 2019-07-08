@@ -53,9 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Test2\PathFinding\CreatureBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\AIMotionBehaviour.cs" />
      <Compile Include="Assets\Scripts\Test2\PathFinding\GameObjectManager.cs" />
      <Compile Include="Assets\Scripts\Test2\PathFinding\RayPerception.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\Steering.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForEscape.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForWnader.cs" />
+     <Compile Include="Assets\Scripts\Test2\PathFinding\Vehicle.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
