@@ -37,14 +37,18 @@ public class RayPerception : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //
         RayGenorator();
     }
-
+    private void FixedUpdate() {
+        ///setting up line render
+        
+    }
     void Initialize()
     {
         //Initialize parent GameObject
         if(creatureObjectManager == null)creatureObjectManager = transform.parent.gameObject.GetComponent< GameObjectManager>();
-
+        
         //Initialize attribute;
         
     }
@@ -52,18 +56,9 @@ public class RayPerception : MonoBehaviour
     void RayGenorator()
     {
         if(creatureObjectManager == null)creatureObjectManager = transform.parent.gameObject.GetComponent< GameObjectManager>();
-        // if(!creatureObjectManager.all_CreatureData.debugVisualizer)
-        // {
-        //     m_lineRender.enabled = false;
-        //     return;
-        // }
-        // else if(creatureObjectManager.all_CreatureData.debugVisualizer && !m_lineRender.enabled)
-        // {
-        //     m_lineRender.enabled = true;
-        // }
+        
         float adjustmentAngle = (180 - creatureObjectManager.all_CreatureData.eyeSight) * 0.5f - transform.rotation.eulerAngles.y;
         
-        ///setting up line render
         if(creatureObjectManager.all_CreatureData.debugVisualizer)
         {
             m_lineRender.positionCount = (creatureObjectManager.all_CreatureData.rayNumber ) * 2;
@@ -73,10 +68,12 @@ public class RayPerception : MonoBehaviour
             m_lineRender.endWidth = creatureObjectManager.all_CreatureData.rayWidth;
 
             //setting color
+
             Color _rayColor = creatureObjectManager.all_CreatureData.rayColor;
-            _rayColor.a = creatureObjectManager.all_CreatureData.debugVisualizer ? 255 : 0;
-            m_lineRender.startColor = _rayColor;
-            m_lineRender.endColor = _rayColor;
+            _rayColor.a = creatureObjectManager.all_CreatureData.debugVisualizer ? 1 : 0;
+            // m_lineRender.startColor = _rayColor;
+            // m_lineRender.endColor = _rayColor;
+            m_lineRender.material.SetColor("_Color",_rayColor);
         }
         
         //detectList.Clear();
@@ -105,8 +102,6 @@ public class RayPerception : MonoBehaviour
             //detect if hit something
             if(Physics.Raycast(ray,out hit, creatureObjectManager.all_CreatureData.viewDistance, detectLayer))
             {
-                
-
                 if(creatureObjectManager.all_CreatureData.debugVisualizer)
                 {
                     m_lineRender.SetPosition(i*2, transform.position);

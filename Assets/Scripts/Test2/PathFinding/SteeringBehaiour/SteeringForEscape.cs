@@ -36,8 +36,7 @@ public class SteeringForEscape : Steering
 
         Vector3 velocity = m_vehicle.velocity;
         Vector3 normalizeVelocity = velocity.normalized;
-        Vector3 ahead = transform.position +  normalizeVelocity * closetDistance * (velocity.magnitude/maxSpeed);
-        
+        Vector3 ahead = transform.position + normalizeVelocity * closetDistance * (velocity.magnitude/maxSpeed);
         
 
         Vector3 force = (ahead  - closestTarget.hitPoint );

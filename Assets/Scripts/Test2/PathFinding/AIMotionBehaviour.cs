@@ -38,7 +38,8 @@ public class AIMotionBehaviour : Vehicle
     // }
     void FixedUpdate()
     {
-        Debug.Log(acceleration);
+       //Debug.Log(acceleration);
+       GetComponent<TrailRenderer>().enabled = m_manager.all_CreatureData.trailVisualizer;
         velocity += acceleration * Time.fixedDeltaTime;
         if(velocity.magnitude > maxSpeed)
         {
