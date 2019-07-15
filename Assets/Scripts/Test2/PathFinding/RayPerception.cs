@@ -114,7 +114,8 @@ public class RayPerception : MonoBehaviour
                 _detectObject.distanceToDetectPoint = (hit.point - transform.position).magnitude;
                 _detectObject.hitPoint = hit.point;
                 _detectObject.obstacleDirection = hit.point - transform.position;
-                _detectObject.obstacleVelocity = hit.transform.GetComponent<Rigidbody>().velocity;
+                if(hit.transform.GetComponent<Rigidbody>() != null)
+                    _detectObject.obstacleVelocity = hit.transform.GetComponent<Rigidbody>().velocity;
 
                 if(closestTarget.distanceToDetectPoint>_detectObject.distanceToDetectPoint || closestTarget.detectObjectTransform == null)
                 {

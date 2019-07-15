@@ -18,6 +18,7 @@ public struct CreatureData
     [Header("Creature Motion Atrribte")]
     [Tooltip("directly adjust the creature global speed")][Range(0.5f,2)]public float speed;
     public bool trailVisualizer;
+    public GameObject Leader;
 }
 public class GameObjectManager : MonoBehaviour
 {
