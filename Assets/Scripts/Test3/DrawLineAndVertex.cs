@@ -7,35 +7,61 @@ using UnityEngine.Rendering;
 
 public class  DrawLineAndVertex : MonoBehaviour
 {
-    Material mat;
-    void Start()
+   // When added to an object, draws colored rays from the
+    // transform position.
+    public int lineCount = 100;
+    public float radius = 3.0f;
+
+    static Material lineMaterial;
+    static void CreateLineMaterial()
     {
-        //RenderPipeline.beginCameraRendering = OnPostProcess(Camera.main);
+        if (!lineMaterial)
+        {
+            // Unity has a built-in shader that is useful for drawing
+            // simple colored things.
+            Shader shader = Shader.Find("Hidden/Internal-Colored");
+            lineMaterial = new Material(shader);
+            lineMaterial.hideFlags = HideFlags.HideAndDontSave;
+            // Turn on alpha blending
+            lineMaterial.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            lineMaterial.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            // Turn backface culling off
+            lineMaterial.SetInt("_Cull", (int)UnityEngine.Rendering.CullMode.Off);
+            // Turn off depth writes
+            lineMaterial.SetInt("_ZWrite", 0);
+        }
     }
 
-    void OnPostProcess(Camera camera)
+    // Will be called after all regular rendering is done
+    public void OnRenderObject()
     {
-        Vector3 _startPos = new Vector3();
-        Vector3 _endPos = new Vector3();
-        Color _color = new Color();
-        OnLineRender(mat, _startPos, _endPos, _color);
-    }
+        CreateLineMaterial();
+        // Apply the line material
+        lineMaterial.SetPass(0);
 
-    public void OnLineRender(Material _mat, Vector3 _startPos, Vector3 _endPos, Color _color)
-    {
-        //RenderPipeline.beginCameraRendering = OnPostProcess(Camera.main);
         GL.PushMatrix();
-        GL.LoadProjectionMatrix(Camera.main.projectionMatrix);
-        GL.modelview = Camera.main.worldToCameraMatrix;
+        
+        // Set transformation matrix for drawing to
+        // match our transform
+        GL.MultMatrix(transform.localToWorldMatrix);
 
-        mat.SetPass(0);
-
+        // Draw lines
         GL.Begin(GL.LINES);
-        GL.Color(_color);
-        GL.Vertex3(_startPos.x, _startPos.y, _startPos.z);
-        GL.Vertex3(_endPos.x, _endPos.y, _endPos.z);
-        GL.End();
+        for (int i = 0; i < lineCount; ++i)
+        {
+            float a = i / (float)lineCount;
+            float angle = a * Mathf.PI * 2;
 
+            // Vertex colors change from red to green
+            GL.Color(new Color(a, 1 - a, 0, 0.8F));
+
+            // One vertex at transform position
+            GL.Vertex3(0, 0, 0);
+
+            // Another vertex at edge of circle
+            GL.Vertex3(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0);
+        }
+        GL.End();
         GL.PopMatrix();
     }
 }
