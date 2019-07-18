@@ -55,22 +55,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\CubeWave\CubeWaveGenerator.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\LookAtAndRotate.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\QuadTree\QuadTree.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\AIMotionBehaviour.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\Controller\MouseController.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\GameObjectManager.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\RayPerception.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\Steering.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForEscape.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForFollowLeader.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForWnader.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test2\PathFinding\Vehicle.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test3\DrawLineAndVertex.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\Test3\VertexData.cs" />
+     <Compile Include="Assets\EricZhan_toolBox\Scripts\WaterSurfaceToCubeWave\CubeWaterSurface.cs" />
      <Compile Include="Assets\Resources\WaterSimulation\WaterSimulation.cs" />
-     <Compile Include="Assets\Scripts\CubeWave\CubeWaveGenerator.cs" />
-     <Compile Include="Assets\Scripts\LookAtAndRotate.cs" />
-     <Compile Include="Assets\Scripts\QuadTree\QuadTree.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\AIMotionBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\Controller\MouseController.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\GameObjectManager.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\RayPerception.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\Steering.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForEscape.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForFollowLeader.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForWnader.cs" />
-     <Compile Include="Assets\Scripts\Test2\PathFinding\Vehicle.cs" />
-     <Compile Include="Assets\Scripts\Test3\DrawLineAndVertex.cs" />
-     <Compile Include="Assets\Scripts\Test3\VertexData.cs" />
-     <Compile Include="Assets\Scripts\WaterSurfaceToCubeWave\CubeWaterSurface.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\ConstraintTransform\ConstraintTransform.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\DragTransform\SoxAtkDragTransform.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\JiggleBoneSimple\SoxAtkJiggleBoneSimple.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\JiggleBoneTentacle\SoxAtkCollider.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\JiggleBoneTentacle\SoxAtkJiggleBone.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\JiggleBoneTentacle\SoxAtkTentacle.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\LookAt\SoxAtkLookAt.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\MotionPath\SoxAtkMotionPath.cs" />
+     <Compile Include="Assets\SoxAnimationToolkit\SampleResources\TestResources\FPSDisplay.cs" />
+     <None Include="Assets\SoxAnimationToolkit\ReadMe.txt" />
      <None Include="Assets\Resources\WaterSimulation\WaterSurface.shader" />
      <None Include="Assets\Resources\WaterSimulation\WaterSimulation.shader" />
  <Reference Include="Unity.Timeline.Editor">
