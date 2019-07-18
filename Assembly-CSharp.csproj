@@ -69,11 +69,21 @@
      <Compile Include="Assets\Scripts\Test2\PathFinding\SteeringBehaiour\SteeringForWnader.cs" />
      <Compile Include="Assets\Scripts\Test2\PathFinding\Vehicle.cs" />
      <Compile Include="Assets\Scripts\Test3\DrawLineAndVertex.cs" />
+     <Compile Include="Assets\Scripts\Test3\VertexData.cs" />
      <Compile Include="Assets\Scripts\WaterSurfaceToCubeWave\CubeWaterSurface.cs" />
      <None Include="Assets\Resources\WaterSimulation\WaterSurface.shader" />
      <None Include="Assets\Resources\WaterSimulation\WaterSimulation.shader" />
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
@@ -81,35 +91,26 @@
  <Reference Include="Unity.Postprocessing.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>/Users/zhanminxiang/Documents/GitHub/Interview_Test/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
